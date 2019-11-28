@@ -1,2 +1,2 @@
-# cervezaWeb
-Project for Databases
+# Screenshot
+![](docs/screenshot.png)
