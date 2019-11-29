@@ -2,10 +2,12 @@
 session_start();
 
 $conn = mysqli_connect(
-  'localhost',
-  'root',
-  'password123',
-  'php_mysql_crud'
+  'remotemysql.com:3306',
+  'WBsKCNeQPE',
+  'my5MD7L8us',
 ) or die(mysqli_erro($mysqli));
 
 ?>
+
+
+
