@@ -15,13 +15,12 @@ CREATE TABLE Bar(
 
 CREATE TABLE User(
     UserID CHAR(30) PRIMARY KEY,
-    Name CHAR(255) NOT NULL,
-    Rates VARCHAR(100));
+    Name CHAR(255) NOT NULL);
 
 CREATE TABLE Rating(
     PRIMARY KEY (UserID, Rate),
     FOREIGN KEY (UserID) REFERENCES User(UserID),
+    FOREIGN KEY (Bar) REFERENCES Bar(Name),
     UserID CHAR(30),
     Rate INT,
-    Bar CHAR(60),
-    FOREIGN KEY (Bar) REFERENCES Bar(Name));
+    Bar CHAR(60));
