@@ -33,22 +33,28 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>UserID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Created At</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
 
           <?php
-          $query = "SELECT * FROM Bar";
+          $query = "SELECT * FROM User";
           $result_tasks = mysqli_query($conn, $query);
+
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
-            <td><?php echo $row['Name']; ?></td>
+            <td><?php echo $row['title']; ?></td>
+            <td><?php echo $row['description']; ?></td>
+            <td><?php echo $row['created_at']; ?></td>
             <td>
-              <a href="edit.php?id=<?php echo $row['Name']?>" class="btn btn-secondary">
+              <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="delete.php?id=<?php echo $row['Name']?>" class="btn btn-danger">
+              <a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>
