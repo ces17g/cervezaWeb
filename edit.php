@@ -3,23 +3,24 @@ include("db.php");
 $title = '';
 $description= '';
 
-if  (isset($_GET['id'])) {
-  $id = $_GET['id'];
-  $query = "SELECT * FROM task WHERE id=$id";
-  $result = mysqli_query($conn, $query);
-  if (mysqli_num_rows($result) == 1) {
-    $row = mysqli_fetch_array($result);
-    $title = $row['title'];
-    $description = $row['description'];
-  }
+if(isset($_GET['table']) && isset($_GET['task'])) {
+    $table = $_GET['table'];
+    $task = $_GET['task'];
+    $query = "SELECT * FROM $table WHERE $task";
+    $result = mysqli_query($conn, $query);
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_array($result);
+        $title = $row['title'];
+        $description = $row['description'];
+    }
 }
 
 if (isset($_POST['update'])) {
   $id = $_GET['id'];
-  $title= $_POST['title'];
-  $description = $_POST['description'];
+  $table= $_POST['table'];
+  $task= $_POST['task'];
 
-  $query = "UPDATE task set title = '$title', description = '$description' WHERE id=$id";
+  $query = "UPDATE $table SET $task WHERE $id";
   mysqli_query($conn, $query);
   $_SESSION['message'] = 'Task Updated Successfully';
   $_SESSION['message_type'] = 'warning';

@@ -1,4 +1,3 @@
-
 CREATE TABLE City(
     Name CHAR(30) PRIMARY KEY,
     Distance REAL,
