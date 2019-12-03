@@ -20,13 +20,13 @@
       <div class="card card-body">
         <form action="insert.php" method="POST">
           <div class="form-group">
-            <input type="text" name="title" class="form-control" placeholder="Enter Username: Case sensitive" autofocus>
+            <input type="text" name="name" class="form-control" placeholder="Enter Username: Case sensitive" autofocus>
           </div>
             <div class="form-group">
-                <input type="text" name="title" class="form-control" placeholder="Bar: [Name of Bar]">
+                <input type="text" name="bar" class="form-control" placeholder="Bar: [Name of Bar]">
             </div>
           <div class="form-group">
-            <input type="text" name="description" class="form-control" placeholder="Rating: [1-5]">
+            <input type="text" name="rate" class="form-control" placeholder="Rating: [1-5]">
           </div>
           <input type="submit" name="save_task" class="btn btn-success btn-block" value="Save Task">
         </form>
