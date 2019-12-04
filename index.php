@@ -28,7 +28,7 @@
           <div class="form-group">
             <input type="text" name="rate" class="form-control" placeholder="Rating: [1-5]">
           </div>
-          <input type="submit" name="save_task" class="btn btn-success btn-block" value="Save Task">
+          <input type="submit" name="save_rate" class="btn btn-success btn-block" value="Save Rate">
         </form>
       </div>
     </div>
@@ -36,23 +36,24 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Bar</th>
             <th>Rating</th>
+            <th>Bar</th>
+            <th>User</th>
           </tr>
         </thead>
         <tbody>
 
           <?php
-          $query = "SELECT * FROM Bar";
+          $query = "SELECT * FROM Rating";
           $result_tasks = mysqli_query($conn, $query);
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
-            <td><?php echo $row['Name']; ?></td>
+            <td><?php echo $row['Rate']; ?></td>
             <td>
-              <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+              <a href="edit.php?id=<?php echo $row['Bar']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+              <a href="delete.php?id=<?php echo $row['UserID']?>" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>
