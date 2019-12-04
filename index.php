@@ -20,13 +20,13 @@
       <div class="card card-body">
         <form action="insert.php" method="POST">
           <div class="form-group">
-            <input type="text" name="name" class="form-control" placeholder="Enter Username: Case sensitive" autofocus>
+            <input type="text" name="Name" class="form-control" placeholder="Enter Username: Case sensitive" autofocus>
           </div>
             <div class="form-group">
-                <input type="text" name="bar" class="form-control" placeholder="Bar: [Name of Bar]">
+                <input type="text" name="Bar" class="form-control" placeholder="Bar: [Name of Bar]">
             </div>
           <div class="form-group">
-            <input type="text" name="rate" class="form-control" placeholder="Rating: [1-5]">
+            <input type="text" name="Rate" class="form-control" placeholder="Rating: [1-5]">
           </div>
           <input type="submit" name="save_rate" class="btn btn-success btn-block" value="Save Rate">
         </form>
@@ -49,11 +49,13 @@
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
             <td><?php echo $row['Rate']; ?></td>
+            <td><?php echo $row['Bar']; ?></td>
+            <td><?php echo $row['UserID']; ?></td>
             <td>
-              <a href="edit.php?id=<?php echo $row['Bar']?>" class="btn btn-secondary">
+              <a href="edit.php?Rate=<?php echo $row['Rate']?>.Bar=<?php echo $row['Bar']?>.UserID=<?php echo $row['UserID']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="delete.php?id=<?php echo $row['UserID']?>" class="btn btn-danger">
+              <a href="delete.php?Rate=<?php echo $row['Rate']?>.Bar=<?php echo $row['Bar']?>.UserID=<?php echo $row['UserID']?>" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>
