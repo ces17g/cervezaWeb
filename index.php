@@ -31,6 +31,14 @@
           <input type="submit" name="save_rate" class="btn btn-success btn-block" value="Save Rate">
         </form>
       </div>
+      <div class="card card-body">
+          <form action="topFive.php" method="POST">
+              <div class="form-group">
+                  <input type="text" name="Pref" class="form-control" placeholder="Enter [Bar/Club/Danceclub]" autofocus>
+              </div>
+              <input type="submit" name="top_five" class="btn btn-success btn-block" value="Check Recommendations">
+          </form>
+      </div>
     </div>
     <div class="col-md-8">
       <table class="table table-bordered">

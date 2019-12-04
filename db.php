@@ -1,5 +1,9 @@
 <?php
-$conn = new mysqli("remotemysql.com:3306","WBsKCNeQPE","my5MD7L8us", 'WBsKCNeQPE');
+$conn = new mysqli(
+    "sql9.freemysqlhosting.net",
+    "sql9314430",
+    "3M2qFNakVr",
+    "sql9314430");
 
 // Check connection
 if ($conn -> connect_errno) {
