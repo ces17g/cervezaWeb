@@ -2,10 +2,11 @@
 
 include("db.php");
 
-if(isset($_GET['table'])) {
-  $table = $_GET['table'];
-  $task = $_GET['task'];
-  $query = "DELETE FROM $table WHERE $task";
+if(isset($_GET['UserID']) AND isset($_GET['Bar']) AND isset($_GET['Rate'])) {
+  $UserID = $_GET['UserID'];
+  $Bar = $_GET['Bar'];
+  $Rate = $_GET['Rate'];
+  $query = "DELETE FROM Rating WHERE UserID=$UserID, Bar=$Bar, Rate=$Rate";
   $result = mysqli_query($conn, $query);
   if(!$result) { die("Query Failed."); }
 
