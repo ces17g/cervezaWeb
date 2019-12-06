@@ -4,9 +4,9 @@
     <data-source source="LOCAL" name="MySQL - @remotemysql.com" uuid="10e4fae1-46e2-4366-9836-3bba6f772f2c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>'remotemysql.com:3306',   'WBsKCNeQPE',   'my5MD7L8us',</remarks>
+      <remarks>&quot;sql9.freemysqlhosting.net&quot;,     &quot;sql9314430&quot;,     &quot;3M2qFNakVr&quot;,     &quot;sql9314430&quot;</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://remotemysql.com:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9314430</jdbc-url>
     </data-source>
   </component>
 </project>
