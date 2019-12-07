@@ -17,7 +17,7 @@ CREATE TABLE User(
     Name CHAR(255) NOT NULL);
 
 CREATE TABLE Rating(
-    PRIMARY KEY (UserID, Rate),
+    PRIMARY KEY (UserID, Bar),
     FOREIGN KEY (UserID) REFERENCES User(UserID),
     FOREIGN KEY (Bar) REFERENCES Bar(Name),
     UserID CHAR(30),

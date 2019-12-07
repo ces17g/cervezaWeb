@@ -52,7 +52,7 @@
         <tbody>
 
           <?php
-          $query = "SELECT * FROM Rating";
+          $query = "SELECT * FROM Rating ORDER BY Rate";
           $result_tasks = mysqli_query($conn, $query);
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
